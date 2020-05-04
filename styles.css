@@ -1,0 +1,131 @@
+:root {
+  --primary-color-red: hsl(0, 78%, 62%);
+  --primary-color-cyan: hsl(180, 62%, 55%);
+  --primary-color-orange: hsl(34, 97%, 64%);
+  --primary-color-blue: hsl(212, 86%, 64%);
+  --neutral-dblue: hsl(234, 12%, 34%);
+  --neutral-gblue: hsl(229, 6%, 66%);
+  --neutral-lgray: hsl(0, 0%, 98%);
+  --alpha: 0.8;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* global rules rules */
+body {
+  font-family: "Poppins";
+  font-size: 15px;
+  background-color: var(--neutral-lgray);
+  --webkit-font-smoothing: antialiased;
+}
+.mainbox {
+  background-color: #fff;
+  box-shadow: 0 8px 15px var(--neutral-gblue);
+  margin: 5px;
+  width: 310px;
+  height: 200px;
+  border-radius: 5px;
+}
+.headtext {
+  font-weight: 600;
+  font-size: 20px;
+}
+.maintext {
+  font-weight: 200;
+  font-size: 13px;
+}
+.image {
+  position: absolute;
+  right: -5%;
+  bottom: -100%;
+}
+.supervisor {
+  border-top: 3px solid var(--primary-color-cyan);
+}
+.teambuilder {
+  border-top: 3px solid var(--primary-color-red);
+  margin-bottom: 20px;
+}
+.karma {
+  border-top: 3px solid var(--primary-color-orange);
+}
+.calculator {
+  border-top: 3px solid var(--primary-color-blue);
+}
+
+/* global rules-end */
+header {
+  margin: 70px auto;
+  width: 37%;
+  text-align: center;
+}
+
+.header-1 {
+  font-weight: 200;
+  font-size: 25px;
+  color: var(--neutral-gblue);
+}
+.header-2 {
+  font-weight: 600;
+  font-size: 25px;
+  color: var(--neutral-dblue);
+}
+.tagline {
+  font-weight: 200;
+  font-size: 15px;
+  color: var(--neutral-gblue);
+  margin-top: 35px;
+}
+/* four cards  grid*/
+.content-container {
+  justify-content: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 310px);
+  grid-template-rows: auto auto auto auto;
+  column-gap: 20px;
+}
+.supervisor {
+  grid-area: 2/1/4/3;
+}
+.teambuilder {
+  grid-area: 1/2/3/3;
+}
+.karma {
+  grid-area: 3/2/5/3;
+}
+.calculator {
+  grid-area: 2/3/4/4;
+}
+.box-content {
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+  position: relative;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+/* code for link */
+a {
+  text-decoration: none;
+  color: cadetblue;
+}
+a:hover {
+  color: red;
+}
+/* media query */
+@media only screen and (max-width: 960px) {
+  header {
+    width: 320px;
+  }
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
